@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Logo from '../assets/linkedin.png';
 export const Data = [
     {
