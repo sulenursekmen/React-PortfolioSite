@@ -1,0 +1,47 @@
+.menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Değişiklik */
+    flex-direction: column;
+  }
+  
+  .menu .menuTitle {
+    font-size: 40px; /* Değişiklik */
+  }
+  
+  .menuList {
+    max-width: 70vw; /* Değişiklik */
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+  }
+  
+  .menuItem {
+    border-radius: 15px;
+    width: 300px;
+    height: auto; /* Değişiklik */
+    margin: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden; /* Değişiklik */
+  }
+  
+  .menuItem:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+  
+  .menuItem div {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: auto; /* Değişiklik */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
