@@ -6,7 +6,8 @@ import Menu from './components/Menu';
 import About from './components/About';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'
+import Projects from './components/Projects';
+// import Footer from './components/Footer'
 function App() {
   return (
     <div className="App">
@@ -16,8 +17,9 @@ function App() {
       <Route path='/menu'  element={<Menu/>}/>
       <Route path='/about'  element={<About/>}/>
       <Route path='/contact'  element={<Contact/>}/>
+      <Route path='/projects' element={<Projects/>}/>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
     </div>
   );
 }

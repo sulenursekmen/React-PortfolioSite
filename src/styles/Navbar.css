@@ -1,45 +1,41 @@
 /* Navbar.css */
 .navbar {
-    width: 100%;
-    height: 100px;
-    background-color: #81a6b5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .navbar .main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px; /* Ana içerikle kenar arasındaki boşluğu ayarlayın */
-  }
-  
-  .navbar_logo {
-    margin-left: 0;
-  }
-  
-  .navbar_links {
-    list-style: none;
-    padding: 0; /* Listenin boşluğunu kaldırın */
-    display: flex;
-    margin-right: 50px;
-  }
-  
-  .navbar_links a {
-    text-decoration: none;
-    color: white;
-    margin-left: 20px;
-    font-weight: bold; /* Bağlantıları daha belirgin hale getirin */
-  }
-  
-  .navbar_links a:last-child {
-    margin-right: 0;
-  }
-  
-  .navbar .main img {
-    height: 70px;
-  }
-  
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  border: b;
+}
+
+.navbar_links {
+  display: flex;
+}
+
+.navbar_links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px; /* Yazılar arasındaki boşluk */
+  position: relative;
+}
+
+.navbar_links a:after {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  height: 2px;
+  background: linear-gradient(to right, #e9d5e9, #4B0082); /* Mor renklerinde linear gradient geçiş */
+  width: 0;
+  transition: width 0.3s;
+}
+
+.navbar_links a:hover:after {
+  width: 100%;
+}
+
+.navbar_links a:hover {
+  text-decoration: none;
+  color: #e9d5e9; /* Hover durumunda renk değiştirme */
+}

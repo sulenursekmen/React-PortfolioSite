@@ -1,48 +1,65 @@
-.mainPage {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  height: 95vh;
+  width: 100%;
+  background-image: url('../assets/son.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   
-  .order {
-    width: auto;
-    margin-left: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .order button {
-    border: none;
-    cursor: pointer;
-    background-color: brown;
-    height: 50px;
-    width: 180px;
-    color: white;
-    font-size: 20px;
-    border-radius: 30px;
-  }
-  
-  @media only screen and (max-width: 650px) {
-    .mainPage {
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .order {
-      margin-left: 0px;
-      border-radius: 10px;
-      padding: 10px;
-      width: 80%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-  }
-  
+ 
+}
+/* Home.css */
+.title {
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  white-space: pre-line;
+}
+
+.left-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.left-content h1 {
+  margin-bottom: 10px; 
+}
+
+.right-content {
+  flex: 1;
+  text-align: right;
+  margin: 20px;
+}
+
+
+.button-container {
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #800080;
+  color: white;
+  border: none;
+  border-radius: 5px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #600060;
+}
+
+.logo-links a {
+  color: #fff;
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-right: 10px; /* Add spacing between icons */
+}
+
+.logo-links a:hover {
+  color: #eee; /* Change the color on hover if desired */
+}
