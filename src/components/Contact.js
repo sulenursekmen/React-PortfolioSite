@@ -1,34 +1,91 @@
+// Contact.jsx
 import React from "react";
-import BannerImage from "../assets/background.svg";
 import '../styles/Contact.css';
+import TextField from '@mui/material/TextField';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import InputAdornment from '@mui/material/InputAdornment';
+import EmailIcon from '@mui/icons-material/Email';
+import SubjectIcon from '@mui/icons-material/Subject';
 const Contact = () => {
   return (
     <div className="contact">
-      <div
-        className="leftSide"
-        style={{ backgroundImage: `url(${BannerImage})` }}
-      ></div>
-      <div className="rightSide">
-        <h1>Bizimle İletişime Geçin</h1>
+      <div className="contact-form">
+        <h1>Benimle İletişime Geçin</h1>
         <form>
-          <label>Adı Soyadı</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Lütfen adınızı soyadınızı giriniz..."
-          />
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Lütfen mailinizi giriniz..."
-          />
+          <div className="input-div">
+            <TextField
+              id="outlined-basic"
+              label="Adı Soyadı"
+              variant="outlined"
+              color="secondary"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                ),
+              }}
+              style={{
+                backgroundColor: "white",
+                color: "#4B0082",
+                width: "100%",
+                textAlign: 'center'
+              }}
+
+            />
+          </div>
+          <div className="input-div">
+            <TextField
+              id="outlined-basic"
+              label="E-posta"
+              variant="outlined"
+              color="secondary"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <EmailIcon />
+                  </InputAdornment>
+                ),
+              }}
+              style={{
+                backgroundColor: "white",
+                color: "#4B0082",
+                width: "100%",
+                textAlign: 'center'
+
+              }}
+
+            /></div>
+          <div className="input-div">
+            <TextField
+              id="outlined-basic"
+              label="Konu"
+              variant="outlined"
+              color="secondary"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SubjectIcon />
+                  </InputAdornment>
+                ),
+              }}
+              style={{
+                backgroundColor: "white",
+                color: "#4B0082",
+                width: "100%",
+                textAlign: 'center'
+              }}
+
+            />
+          </div>
+
           <label>Mesajınız</label>
           <textarea
             rows="6"
             name="message"
             placeholder="Lütfen mesajınızı giriniz..."
           ></textarea>
+          <button type="submit">Gönder</button>
         </form>
       </div>
     </div>

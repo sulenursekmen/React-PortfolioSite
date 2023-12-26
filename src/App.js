@@ -7,7 +7,10 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
-// import Footer from './components/Footer'
+import Blog from './components/Blog';
+ import Footer from './components/Footer'
+import Certificate from './components/Certificate';
+import Education from './components/Education';
 function App() {
   return (
     <div className="App">
@@ -18,8 +21,11 @@ function App() {
       <Route path='/about'  element={<About/>}/>
       <Route path='/contact'  element={<Contact/>}/>
       <Route path='/projects' element={<Projects/>}/>
+      <Route path='/certificate' element={<Certificate/>}/>
+      <Route path='/blog' element={<Blog/>}/>
+      <Route path='/education' element={<Education/>}/>
     </Routes>
-    {/* <Footer/> */}
+    <Footer/> 
     </div>
   );
 }

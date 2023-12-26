@@ -1,18 +1,22 @@
 .home-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   background-color: #000000;
   color: white;
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   background-image: url('../assets/son.svg');
   background-repeat: no-repeat;
   background-size: cover;
   
- 
+  
 }
-/* Home.css */
+.name{
+  color: purple;
+  font-size: 56px;
+  font-family: 'Allura', cursive;
+
+}
 .title {
   font-family: 'Courier New', monospace;
   font-size: 24px;
@@ -22,10 +26,13 @@
 .left-content {
   flex: 1;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .left-content h1 {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .right-content {
@@ -33,7 +40,6 @@
   text-align: right;
   margin: 20px;
 }
-
 
 .button-container {
   margin-top: 20px;
@@ -54,12 +60,41 @@
   background-color: #600060;
 }
 
+.button-container button span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo-links a {
   color: #fff;
-  font-size: 24px; /* Adjust the font size as needed */
-  margin-right: 10px; /* Add spacing between icons */
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 .logo-links a:hover {
-  color: #eee; /* Change the color on hover if desired */
+  color: purple; /* Change the color on hover if desired */
+}
+.underline {
+  height: 2px;
+  background: linear-gradient(to right, #e9d5e9, #4B0082);
+  width: 100%;
+  margin-bottom: 20px; /* İhtiyaca göre ayarlayabilirsiniz */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-content{
+    margin-top: 150px;
+    background-color: #000000;
+    height: max-content;
+  }
+  .right-content {
+    display: none;
+  }
 }
