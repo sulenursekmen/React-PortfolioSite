@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-text">
-          <p>&copy; 2023 Şule Nur Sekmen - Portfolio Web Site</p>
+          <p>&copy; 2024 Şule Nur Sekmen - Portfolio Web Site</p>
         </div>
         <div className="social-icons">
           <a href="https://www.linkedin.com/in/sulenursekmen/" target="_blank" rel="noopener noreferrer">

@@ -3,15 +3,16 @@
     text-align: center;
     /* position: fixed; */
     bottom: 0;
-    width: 100%;
-    background-color: black;
+    background-color: #151515;
     color: whitesmoke;
+    box-sizing: border-box;
   }
   
   .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
   }
   
   .footer-text {
@@ -26,6 +27,6 @@
   }
   
   .social-icons a:hover {
-    color: purple;
+    color: orange;
   }
   

@@ -1,44 +1,50 @@
-/* styles/Projects.css */
+
 .projects-page {
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(0, 0, 0);
   overflow: auto;
+  background-color: #151515;
 }
 
 .project-container {
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.title{
-  color: #fff;
+/* .title{
+  color: #404040;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to left, #000000,#4B0082,#4B0082, #000000); 
   text-align: center;
   padding: 15px;
-}
+}  */
+
 
 .project-card {
   position: relative;
   width: 25vw;
-  height: 25vh;
+  height: 35vh;
   margin: 20px;
   padding: 15px;
-  border: 1px solid #4B0082;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #2b2b2b;
+  color: white;
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Remove background-image transition */
   cursor: pointer;
-  box-shadow: 0 16px 20px #4B0082;
-
+  box-shadow: rgba(138, 88, 1, 0.35) 0px 5px 15px;
   padding: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-card::before {
@@ -52,15 +58,15 @@
   filter: blur(8px);
   transition: opacity 0.3s ease;
   opacity: 0;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 .project-card:hover {
   z-index: 1;
-  box-shadow: 0 24px 30px #4B0082;
-  background-color: #000000;
-  transform: scale(1.1);
-  background-image: url('../assets/project.svg'); /* Set the normal background image */
+  box-shadow: 0 24px 30px #3d3d3d;
+  background-color: #151515;
+  /* transform: scale(1.1); */
+  /* background-image: url('../assets/project.svg'); Set the normal background image */
   background-size: contain; /* Ensure the background image covers the entire element */
   background-position: center; /* Center the background image */
 }
@@ -74,6 +80,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card-image{
+  width:calc(25vw - 10px);
+  height:20vh;
+  border-radius: 5px;
 }
 .overlay {
   position: absolute;
@@ -91,7 +103,7 @@
 
 .overlay button {
   padding: 10px 20px;
-  background-color: #800080;
+  background-color: orange;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -100,7 +112,7 @@
 }
 
 .overlay button:hover {
-  background-color: #d317d3;
+  background-color: rgba(255, 166, 0, 0.546);
 }
 
 .overlay button span {

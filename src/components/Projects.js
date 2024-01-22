@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/Projects.css'; 
 import VisibilityIcon from '@mui/icons-material/Visibility';
-  
+import ProjectImage from '../assets/project.svg'
 const Projects = () => {
     const projectsData = [
         {
@@ -41,22 +41,25 @@ const Projects = () => {
             description: 'Bu proje hakkında kısa bir açıklama.',
             link: 'https://github.com/sulenursekmen/JiraApplication-React',
           },
+       
       
       ];
   return (
     <div className='projects-page'> 
-    <h1 className='title'>PROJELER</h1>
-        <div className="project-container">
+    <div className="project-container">
       {projectsData.map((project) => (
-        <div key={project.id} className="project-card">
+       <a href={project.link} target="_blank" rel="noopener noreferrer">
+         <div key={project.id} className="project-card">
+          <img src={ProjectImage} alt='' className='card-image'/>
           <h3 className='card-title'>{project.title}</h3>
-          <p className='card-description'>{project.description}</p>
+          {/* <p className='card-description'>{project.description}</p> */}
           <a href={project.link} target="_blank" rel="noopener noreferrer">
             <div className="overlay">
               <button><span>Detayları Gör <VisibilityIcon/></span></button>
             </div>
           </a>
         </div>
+       </a>
       ))}
     </div>
     </div>

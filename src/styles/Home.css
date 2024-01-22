@@ -1,48 +1,78 @@
 .home-container {
   display: flex;
-  justify-content: space-around;
-  background-color: #000000;
-  color: white;
+  flex-direction: column;
+  color: #777;
   height: 100vh;
   width: 100%;
-  background-image: url('../assets/son.svg');
+  background-color: #f5f5f5;
+  background-image: url('../assets/black.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-  
-  
-}
-.name{
-  color: purple;
-  font-size: 56px;
-  font-family: 'Allura', cursive;
-
-}
-.title {
-  font-family: 'Courier New', monospace;
-  font-size: 24px;
-  white-space: pre-line;
+  background-size: cover; /* Resmi ekranı kaplayacak şekilde ayarlar */
+  background-position: center; /* Resmi ortalar */
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.left-content {
-  flex: 1;
-  padding: 30px;
+
+.container { 
+   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100%;
+
+  align-items: start;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  color: #404040;
+  padding: 20px;
+ 
+
 }
 
-.left-content h1 {
-  margin-bottom: 10px;
+.name {
+  font-size: 36px; /* Adjust the font size for better aesthetics */
+  margin-bottom: 10px; /* Add margin for separation */
+  text-align: center;
+  color: #fff;
 }
 
-.right-content {
-  flex: 1;
-  text-align: right;
-  margin: 20px;
+.text {
+  font-size: 18px; /* Adjust the font size for better readability */
+  margin-bottom: 20px; /* Add margin for separation */
+  text-align: center;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.underline {
+  height: 2px;
+  background: linear-gradient(to right, #e9d5e9, #4B0082);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.paragraph{
+  width: 50%;
+  color: white;
+}
+
+
+
+.logo-links a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
+  text-decoration: none; /* Remove default underline */
+}
+
+.logo-links a:hover {
+  color: purple;
 }
 
 .button-container {
-  margin-top: 20px;
+  margin-top:10px;
+  display: flex;
 }
 
 .button-container button {
@@ -67,34 +97,44 @@
   align-items: center;
 }
 
-.logo-links a {
-  color: #fff;
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-.logo-links a:hover {
-  color: purple; /* Change the color on hover if desired */
-}
-.underline {
-  height: 2px;
-  background: linear-gradient(to right, #e9d5e9, #4B0082);
-  width: 100%;
-  margin-bottom: 20px; /* İhtiyaca göre ayarlayabilirsiniz */
-}
 
 /* Media query for smaller screens */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .home-container {
     flex-direction: column;
     align-items: center;
   }
-  .left-content{
-    margin-top: 150px;
-    background-color: #000000;
-    height: max-content;
+
+  .name {
+    font-size: 24px; 
   }
-  .right-content {
+
+  .text {
+    font-size: 14px; 
+  }
+
+  .menu {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px;
+    box-shadow: 0 0px 20px #bbbbbb;
+    z-index: 1;
   }
-}
+  
+  .menu.show {
+    display: flex;
+  }
+  
+  .menu a {
+    color: #404040;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+} */

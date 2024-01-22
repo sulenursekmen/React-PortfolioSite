@@ -11,6 +11,7 @@ import Blog from './components/Blog';
  import Footer from './components/Footer'
 import Certificate from './components/Certificate';
 import Education from './components/Education';
+
 function App() {
   return (
     <div className="App">

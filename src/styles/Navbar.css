@@ -1,77 +1,245 @@
-/* Navbar.css */
+
 .navbar {
-  background-color: #000000;
+  box-sizing: border-box;
   color: white;
-  padding: 20px;
+  z-index: 1000;
+  padding: 30px;
+
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 5vh;
+  height: calc(10vh - 10px);
+  /* border-bottom: 3px solid #e0dede; */
+  position: fixed;
+  width: 100%;
+  background-color: #1515156e;
  
 }
 
-.navbar_links {
+
+
+.links {
   display: flex;
+  font-size:18px; 
 }
 
-.navbar_links a {
-  color: white;
+.links a {
+  
+  color: #ffffff;
   text-decoration: none;
-  margin: 0 15px; /* Yazılar arasındaki boşluk */
+  margin: 0 15px;
   position: relative;
-  transition: color 0.3s; /* Add transition for color change */
+  transition: color 0.3s;
 }
 
-.navbar_links a:after {
+.links a:after {
   content: "";
   display: block;
   margin-top: 2px;
   height: 2px;
-  background: linear-gradient(to right, #e9d5e9, #4B0082); /* Mor renklerinde linear gradient geçiş */
+  background: orange;
   width: 0;
   transition: width 0.3s;
 }
 
-.navbar_links a:hover {
+.links a:hover {
   text-decoration: none;
-  color: #e9d5e9; /* Hover durumunda renk değiştirme */
-  transform: scale(1.1); /* Scale up the link on hover */
+  color: #ffffffce;
+
 }
 
-.navbar_links a:hover:after {
+.links a:hover:after {
   width: 100%;
 }
+.title-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-/* Responsive Styles */
-/* @media screen and (max-width: 768px) {
+}
+
+.navbar-name {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 40px; /* İstediğiniz büyüklük */
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'Allura', cursive;
+  margin: 1px 0; /* Üst ve alt boşlukları kontrol etmek için kullanılır */
+}
+
+.navbar-button{
+  margin-left: 10px;
+}
+.navbar-button span {
+  display: flex;
+  align-items: center; /* İçerikleri dikey olarak hizalar */
+  justify-content: center;
+}
+
+.navbar-button span svg {
+  margin-left: 5px; /* İkon ile metin arasında boşluk bırakır */
+}
+
+
+
+
+.title-text {
+  background-color: orange;
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
+  border-radius: 5px;
+}
+.logos {
+  display: flex;
+}
+
+.logos svg {
+  fill: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.logos svg:hover {
+  fill: orange;
+ 
+}
+
+/* Ayrıca, linkleri, ismi ve logoları boşluklarla ayırmak için bazı stiller eklenmiştir. */
+.links {
+  margin-right: auto;
+}
+
+.logos {
+  margin-left: auto;
+}
+
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu div {
+  width: 30px;
+  height: 3px;
+  background-color: #404040;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+
+@media screen and (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .navbar_logo {
-    order: 2;
-  }
-
-  .navbar_links {
-    order: 1;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #000000;
-    z-index: 1;
-  }
-
-  .navbar_links.show {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    padding: 15px;
+   
   }
 
-  .hamburger-menu {
-    display: block;
-    order: 3;
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 10px;
+
   }
-} */
+
+  .logos {
+    display: none;
+  }
+
+  .links a {
+    margin: 10px 0;
+  }
+
+  .navbar-button{
+    margin-left: 0px;
+  }
+}
+
+
+
+/* .logos {
+  display: none;
+}
+
+.title-text {
+  display: none;
+}
+
+.navbar-name {
+  display: flex;
+  text-align: center;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.links {
+  display: none;
+}
+
+.links a:after{
+  display: none;
+  
+}
+
+.hamburger-menu {
+  display: flex;
+
+  font-size: 24px; 
+  text-align: center;
+  padding: 10px; 
+  cursor: pointer;
+  width: 60px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 2000;
+  right: 0;
+}
+
+.hamburger-menu :active{
+  color: white;
+}
+
+.links.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: calc(10vh - 10px);
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #151515; /* Set the background color as needed */
+  /* z-index: 1000;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+.links.active a {
+  color: #ffffff;    
+  padding: 10px;
+}
+
+.links.active a:hover{
+  background-color: #9a4b4b;
+}
+
+.links.active a {
+  color: #404040;
+  padding: 10px;
+} */ 
