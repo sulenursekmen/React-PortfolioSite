@@ -1,5 +1,5 @@
 
-import Logo from '../assets/linkedin.png';
+import Logo from '../assets/project.svg';
 export const Data = [
     {
         name:'Sertifika',
