@@ -3,22 +3,22 @@ import "../styles/Home.css";
 const Home = () => {
   const lastParagraph =
     "Software Developer | React Developer | Front end Developer";
-  const typingSpeed = 100; // Adjust the speed as needed
-
+  const typingSpeed = 100; 
   const [text, setText] = useState("");
 
-  const typewriter = (textIndex) => {
-    if (textIndex <= lastParagraph.length) {
-      setText(lastParagraph.slice(0, textIndex));
-      setTimeout(() => typewriter(textIndex + 1), typingSpeed);
-    }
-  };
-
   useEffect(() => {
+    const typewriter = (textIndex) => {
+      if (textIndex <= lastParagraph.length) {
+        setText(lastParagraph.slice(0, textIndex));
+        setTimeout(() => typewriter(textIndex + 1), typingSpeed);
+      }
+    };
+  
     typewriter(0);
+  
     return () => clearTimeout();
-  }, []);
-
+  }, [lastParagraph, typingSpeed]);
+  
   return (
     <>
       <div className="home-container">

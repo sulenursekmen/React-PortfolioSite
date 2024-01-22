@@ -1,6 +1,6 @@
 // Navbar.js
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -8,31 +8,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import DownloadIcon from "@mui/icons-material/Download";
 import "../styles/Navbar.css";
-import CloseIcon from "@mui/icons-material/Close";
+
 import { Button } from "@mui/material";
 const PDF_FILE_URL = "http://localhost:3000/cv.pdf";
 const Navbar = () => {
-  const lastParagraph =
-    "Software Developer | React Developer | Front end Developer";
-  const typingSpeed = 100;
 
-  const [text, setText] = useState("");
-  const [menuActive, setMenuActive] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
-  };
-
-  const closeMenu = () => {
-    setMenuActive(false);
-  };
-
-  const typewriter = (textIndex) => {
-    if (textIndex <= lastParagraph.length) {
-      setText(lastParagraph.slice(0, textIndex));
-      setTimeout(() => typewriter(textIndex + 1), typingSpeed);
-    }
-  };
 
   const downloadFileAtURL = (url) => {
     const fileName = url.split("/").pop();
@@ -57,25 +37,20 @@ const Navbar = () => {
         });
     }
   };
-  useEffect(() => {
-    typewriter(0);
-    return () => clearTimeout();
-  }, []);
+ 
 
   return (
     <nav className="navbar">
-      <div className={`links ${menuActive ? "active" : ""}`}>
-        <Link to="/" onClick={closeMenu}>
+      <div className='links'>
+        <Link to="/">
           Home
         </Link>
-        <Link to="/projects" onClick={closeMenu}>
+        <Link to="/projects" >
         Portfolio
         </Link>
-        {/* <Link to="/contact" onClick={closeMenu}>
-          CV
-        </Link> */}
+   
         <div className="navbar-button">
-          {" "}
+      
           <Button
             variant="outlined" color="warning"
             style={{ borderColor: '#fff', color: '#fff' }}
@@ -94,7 +69,6 @@ const Navbar = () => {
 
       <div className="title-navbar">
         <p className="navbar-name">Şule Nur Sekmen</p>
-        {/* <p className='title-text'> {'<' + text + '/>'}</p> */}
       </div>
 
       <div className="logos">
@@ -127,15 +101,6 @@ const Navbar = () => {
           <TwitterIcon fontSize="large" />
         </a>
       </div>
-
-      {/* <div
-        className={`hamburger-menu ${menuActive ? "active" : ""}`}
-        onClick={toggleMenu}
-      >
-        <div></div>
-        <div></div>
-        <div></div>
-      </div> */}
     </nav>
   );
 };
