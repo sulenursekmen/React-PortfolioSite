@@ -6,7 +6,7 @@ import "../styles/Home.css";
 const Home = () => {
   const lastParagraph =
     "Software Developer | React Developer | Front end Developer";
-  const typingSpeed = 100;
+  const typingSpeed = 25;
   const [text, setText] = useState("");
 
   useEffect(() => {
