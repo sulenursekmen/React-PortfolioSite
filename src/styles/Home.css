@@ -4,15 +4,22 @@
   color: #777;
   height: 100vh;
   width: 100%;
-  background-color: #151515;
-  background-image: url('https://raw.githubusercontent.com/sulenursekmen/React-PortfolioSite/main/src/assets/black.svg');
   background-repeat: no-repeat;
-  background-size: cover; /* Resmi ekranı kaplayacak şekilde ayarlar */
-  background-position: center; /* Resmi ortalar */
+  background-size: cover;
+  background-position: center; 
   box-sizing: border-box;
   overflow: hidden;
 }
 
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
 .container { 
    box-sizing: border-box;
