@@ -14,7 +14,7 @@ function App() {
     const fakeAsyncProcess = () => {
       setTimeout(() => {
         setLoading(false); // Bekleme süresi bittiğinde loading state'ini false yap
-      }, 2000); // 2 saniye bekleyelim (istediğiniz süreyi ayarlayabilirsiniz)
+      }, 3000); // 2 saniye bekle
     };
 
     fakeAsyncProcess(); // Asenkron işlemi başlat

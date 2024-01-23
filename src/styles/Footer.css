@@ -20,13 +20,3 @@
     text-align: center; 
   }
   
-  .social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  .social-icons a:hover {
-    color: orange;
-  }
-  

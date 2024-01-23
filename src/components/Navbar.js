@@ -87,14 +87,14 @@ const Navbar = () => {
           <GitHubIcon fontSize="large" />
         </a>
         <a
-          href="https://github.com/sulenursekmen"
+          href="https://www.instagram.com/sullensben"
           target="_blank"
           rel="noopener noreferrer"
         >
           <InstagramIcon fontSize="large" />
         </a>
         <a
-          href="https://github.com/sulenursekmen"
+          href="https://twitter.com/p_alternans"
           target="_blank"
           rel="noopener noreferrer"
         >

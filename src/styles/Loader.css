@@ -7,3 +7,55 @@
     width: 100%;
     overflow: hidden;
 }
+
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+  }
+  .loader .loader-wrapper {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  .loader .loader-wrapper span {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    animation: loading 3.3s infinite ease-in-out;
+  }
+  .loader .loader-wrapper span:nth-of-type(1) {
+    animation-delay: 1000ms;
+  }
+  .loader .loader-wrapper span:nth-of-type(2) {
+    animation-delay: 800ms;
+  }
+  .loader .loader-wrapper span:nth-of-type(3) {
+    animation-delay: 600ms;
+  }
+  .loader .loader-wrapper span:nth-of-type(4) {
+    animation-delay: 400ms;
+  }
+  .loader .loader-wrapper span:nth-of-type(5) {
+    animation-delay: 200ms;
+  }
+  @keyframes loading {
+    0% {opacity: 0;
+    transform: translateX(-300px);
+    }
+    33% {opacity: 1;
+    transform: translateX(0px);
+    }
+    66% {opacity: 1;
+    transform: translateX(0px);
+    }
+    100% {opacity: 0;
+    transform: translateX(300px);
+    }
+  }

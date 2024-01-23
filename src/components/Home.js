@@ -2,15 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
-
+import Black from '../assets/black.svg'
 const Home = () => {
   const lastParagraph =
     "Software Developer | React Developer | Front end Developer";
   const typingSpeed = 25;
   const [text, setText] = useState("");
-  const [imageLoaded, setImageLoaded] = useState(false);
+
 
   useEffect(() => {
     const typewriter = (textIndex) => {
@@ -25,27 +23,19 @@ const Home = () => {
     return () => clearTimeout();
   }, [lastParagraph, typingSpeed]);
 
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
+
 
   return (
     <>
       <div className="home-container">
-        {!imageLoaded && (
-          <Box sx={{ display: "flex" }}>
-            <CircularProgress color="warning" />
-          </Box>
-        )}
+   
         <img
-          className={`background-image ${
-            imageLoaded ? "loaded" : "not-loaded"
-          }`}
-          src="https://raw.githubusercontent.com/sulenursekmen/React-PortfolioSite/main/src/assets/black.svg"
+          className='background-image'
+          src={Black}
           alt="Background"
-          onLoad={handleImageLoad}
+  
         />
-        <div className={`container ${imageLoaded ? "visible" : "hidden"}`}>
+        <div className='container'>
           <h1 className="name">Hi, I am Şule Nur Sekmen</h1>
           <p className="text">{"<" + text + "/>"}</p>
           <p className="paragraph">Skills</p>

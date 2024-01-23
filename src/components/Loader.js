@@ -1,18 +1,20 @@
 // components/Loader.js
 
-import React from 'react';
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
+import React from "react";
 import "../styles/Loader.css";
 
 const Loader = () => {
   return (
-    <div className="loader">
-          <Box sx={{ display: "flex" }}>
-            <CircularProgress color="warning" />
-          </Box>
-   
-    </div>
+    <div class="loader">
+  <div class="loader-wrapper">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
   );
 };
 
