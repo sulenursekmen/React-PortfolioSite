@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
-import Black from '../assets/black.svg'
+import Black from '../assets/home.png'
 const Home = () => {
   const lastParagraph =
     "Software Developer | React Developer | Front end Developer";
