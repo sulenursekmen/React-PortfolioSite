@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
-import Black from '../assets/home.png'
+
 const Home = () => {
   const lastParagraph =
     "Software Developer | React Developer | Front end Developer";
@@ -28,13 +28,7 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
-   
-        <img
-          className='background-image'
-          src={Black}
-          alt="Background"
   
-        />
         <div className='container'>
           <h1 className="name">Hi, I am Şule Nur Sekmen</h1>
           <p className="text">{"<" + text + "/>"}</p>
