@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   color: #777;
-  background-image: url('../assets/home.png');
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -20,7 +19,7 @@
   display: flex;
   flex-direction: column;
   background-color: #151515;
-  background-image: url('../assets/home.png');
+  background-image: url('/build/home.png');
   background-repeat: no-repeat;
   background-size: cover;
   align-items: flex-start;
