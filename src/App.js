@@ -5,19 +5,32 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import backgroundImage from "./assets/homepage.png";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
-    // Simüle edilen bir asenkron işlem (örneğin, sayfa yüklenmesi gibi)
-    const fakeAsyncProcess = () => {
-      setTimeout(() => {
-        setLoading(false); // Bekleme süresi bittiğinde loading state'ini false yap
-      }, 3000); // 2 saniye bekle
+    // Simüle edilen bir asenkron işlem (örneğin, resim yüklenmesi gibi)
+    const fakeAsyncImageLoad = () => {
+      const image = new Image();
+      image.src = backgroundImage;
+
+      image.onload = () => {
+        // Resim başarıyla yüklendiğinde loader'ı gizle
+        setLoading(false);
+        setImageLoaded(true);
+      };
+
+      image.onerror = () => {
+        // Resim yüklenirken bir hata oluştuğunda loader'ı gizle
+        setLoading(false);
+        setImageLoaded(true);
+      };
     };
 
-    fakeAsyncProcess(); // Asenkron işlemi başlat
+    fakeAsyncImageLoad(); // Asenkron resim yükleme işlemi başlat
   }, []);
 
   return (
@@ -26,12 +39,17 @@ function App() {
         <Loader />
       ) : (
         <>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
-          <Footer />
+          {imageLoaded && (
+
+            <>
+              <Navbar />
+              <Routes>
+                <Route path="/" element={<Home backgroundImage={backgroundImage} />} />
+                <Route path="/projects" element={<Projects />} />
+              </Routes>
+              <Footer />
+            </>
+          )}
         </>
       )}
     </div>

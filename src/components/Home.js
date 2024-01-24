@@ -3,12 +3,11 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Home.css";
 
-const Home = () => {
+const Home = ({ backgroundImage }) => {
   const lastParagraph =
     "Software Developer | React Developer | Front end Developer";
   const typingSpeed = 25;
   const [text, setText] = useState("");
-
 
   useEffect(() => {
     const typewriter = (textIndex) => {
@@ -23,13 +22,17 @@ const Home = () => {
     return () => clearTimeout();
   }, [lastParagraph, typingSpeed]);
 
-
-
   return (
     <>
       <div className="home-container">
-  
-        <div className='container'>
+        <div
+          className="container"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
           <h1 className="name">Hi, I am Şule Nur Sekmen</h1>
           <p className="text">{"<" + text + "/>"}</p>
           <p className="paragraph">Skills</p>
